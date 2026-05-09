@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,36 +18,39 @@ body {
 }
 
 header {
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 52px;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  color: #94a3b8;
-  font-size: 18px;
+  color: #cbd5e1;
+  font-size: 20px;
 }
 
 .cta {
   margin-top: 30px;
 }
 
-.cta a {
+.cta a,
+button {
   background: #3b82f6;
   color: white;
   padding: 14px 28px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -51,24 +58,50 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .card {
   background: #1e293b;
-  padding: 25px;
-  border-radius: 10px;
-  width: 260px;
+  padding: 28px;
+  border-radius: 14px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-h2 {
-  margin-bottom: 30px;
+.card p,
+.why {
+  color: #cbd5e1;
+  line-height: 1.6;
 }
 
 .why {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
-  color: #cbd5e1;
+}
+
+form {
+  max-width: 520px;
+  margin: 35px auto 0;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+textarea {
+  height: 130px;
+  resize: vertical;
 }
 
 footer {
@@ -77,8 +110,25 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-</style>
 
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
+  z-index: 1000;
+}
+
+.whatsapp img {
+  width: 26px;
+}
+</style>
 </head>
 
 <body>
@@ -88,7 +138,7 @@ footer {
   <p class="subtitle">We build systems that grow your business</p>
 
   <div class="cta">
-    <a href="mailto:info@marktechnologic.com">Get a Free Consultation</a>
+    <a href="#contact">Get a Free Consultation</a>
   </div>
 </header>
 
@@ -116,56 +166,31 @@ footer {
 <section>
   <h2>Why Choose Us</h2>
   <p class="why">
-    We combine technology, marketing strategy, and real business understanding to deliver solutions that actually generate results. 
-    Our focus is not just design — it's growth.
+    We combine technology, marketing strategy, and real business understanding to deliver solutions that generate real results.
+    Our focus is not just design — it is business growth.
   </p>
 </section>
-<section style="text-align:center;">
-  <h2 style="text-align:center;">Get a Free Consultation</h2>
 
-  <form action="mailto:info@marktechnologic.com" method="POST" enctype="text/plain" style="max-width:500px;margin:auto;">
-    
-    <input type="text" name="Name" placeholder="Your Name" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;">
-    
-    <input type="email" name="Email" placeholder="Your Email" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;">
+<section id="contact">
+  <h2>Get a Free Consultation</h2>
 
-    <input type="tel" name="Phone" placeholder="Your Phone Number" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;">
-    <input type="tel" name="Phone" ...>
-    <textarea name="Message" placeholder="Tell us about your project" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;height:120px;"></textarea>
-    
-    <button type="submit" style="background:#3b82f6;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;">
-      Send Message
-    </button>
+  <form action="mailto:info@marktechnologic.com" method="POST" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+    <textarea name="Message" placeholder="Tell us about your project" required></textarea>
 
+    <button type="submit">Send Message</button>
   </form>
 </section>
-    
-    <input type="email" name="Email" placeholder="Your Email" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;">
-    <textarea name="Message" placeholder="Tell us about your project" required style="width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;height:120px;"></textarea>
-    
-    <button type="submit" style="background:#3b82f6;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;">
-      Send Message
-    </button>
 
-  </form>
-</section>
 <footer>
   <p>© 2026 Marktechnologic LLC | All rights reserved</p>
 </footer>
-<a href="https://wa.me/17034701224" target="_blank" style="
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-padding: 15px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-box-shadow: 0 0 10px rgba(0,0,0,0.3);
-z-index: 1000;
-">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25">
+
+<a class="whatsapp" href="https://wa.me/17034701224" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
+
 </body>
 </html>
