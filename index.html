@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -23,9 +21,9 @@ header {
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-h1 {
-  font-size: 52px;
-  margin-bottom: 10px;
+.logo {
+  width: 190px;
+  margin-bottom: 18px;
 }
 
 .subtitle {
@@ -33,20 +31,20 @@ h1 {
   font-size: 20px;
 }
 
-.cta {
-  margin-top: 30px;
-}
+.cta { margin-top: 30px; }
 
 .cta a,
-button {
+button,
+.btn {
   background: #3b82f6;
   color: white;
-  padding: 14px 28px;
+  padding: 13px 24px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  display: inline-block;
 }
 
 section {
@@ -65,8 +63,18 @@ section {
   background: #1e293b;
   padding: 28px;
   border-radius: 14px;
-  width: 280px;
+  width: 290px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 
 .card p,
@@ -78,6 +86,11 @@ section {
 .why {
   max-width: 850px;
   margin: auto;
+}
+
+.btn {
+  margin-top: 12px;
+  font-size: 14px;
 }
 
 form {
@@ -125,8 +138,12 @@ footer {
   z-index: 1000;
 }
 
-.whatsapp img {
-  width: 26px;
+.whatsapp img { width: 26px; }
+
+@media (max-width: 768px) {
+  .logo { width: 160px; }
+  .subtitle { font-size: 17px; }
+  .card { width: 100%; max-width: 340px; }
 }
 </style>
 </head>
@@ -134,8 +151,7 @@ footer {
 <body>
 
 <header>
-  <img src="MARKTECHNOLOGIC.png" alt="Marktechnologic Logo" style="width:180px;margin-bottom:15px;">
-  
+  <img class="logo" src="MARKTECHNOLOGIC.png" alt="Marktechnologic Logo">
   <p class="subtitle">We build systems that grow your business</p>
 
   <div class="cta">
@@ -147,28 +163,78 @@ footer {
   <h2>Our Services</h2>
 
   <div class="services">
+
     <div class="card">
-      <h3>Web Development</h3>
-      <p>High-performance websites designed to convert visitors into clients.</p>
+      <div class="icon">💻</div>
+      <h3>Web Design & Development</h3>
+      <p>Modern, fast and professional websites designed to convert visitors into real customers.</p>
+      <a class="btn" href="#contact">See more</a>
     </div>
 
     <div class="card">
-      <h3>Digital Marketing</h3>
-      <p>Targeted campaigns that generate real leads and measurable growth.</p>
+      <div class="icon">🛒</div>
+      <h3>E-Commerce Websites</h3>
+      <p>Online stores built to showcase products, accept orders and help your business sell online.</p>
+      <a class="btn" href="#contact">See more</a>
     </div>
 
     <div class="card">
-      <h3>Automation Systems</h3>
-      <p>We streamline your operations to save time and increase efficiency.</p>
+      <div class="icon">📱</div>
+      <h3>Social Media Marketing</h3>
+      <p>Content and advertising strategies for Facebook, Instagram and local business visibility.</p>
+      <a class="btn" href="#contact">See more</a>
     </div>
+
+    <div class="card">
+      <div class="icon">📍</div>
+      <h3>Google My Business</h3>
+      <p>Optimization for Google Maps and local search so customers can find and contact your business.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Google Ads</h3>
+      <p>Targeted advertising campaigns designed to generate calls, leads and measurable growth.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Branding</h3>
+      <p>Professional brand identity, messaging and visual direction to help your company stand out.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>Logo Design</h3>
+      <p>Clean, professional logos created to represent your company with credibility and style.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🖌️</div>
+      <h3>Graphic Design</h3>
+      <p>Flyers, banners, business cards, social media graphics and marketing materials for your brand.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📲</div>
+      <h3>Mobile App Development</h3>
+      <p>Custom mobile app solutions designed to improve customer experience and business operations.</p>
+      <a class="btn" href="#contact">See more</a>
+    </div>
+
   </div>
 </section>
 
 <section>
   <h2>Why Choose Us</h2>
   <p class="why">
-    We combine technology, marketing strategy, and real business understanding to deliver solutions that generate real results.
-    Our focus is not just design — it is business growth.
+    We combine technology, marketing strategy and real business understanding to deliver solutions that generate results.
+    Our focus is not just design — it is business growth, better visibility and stronger customer engagement.
   </p>
 </section>
 
